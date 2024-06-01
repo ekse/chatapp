@@ -12,7 +12,7 @@ export class WsService {
   constructor() { }
 
   connect(): void {
-    this.socket = new WebSocket('ws://localhost:8000/ws');
+    this.socket = new WebSocket('wss://chatapp-g11k.onrender.com/ws');
 
     this.socket.onopen = () => {
       console.log('WebSocket connection established.');
