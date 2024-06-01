@@ -1,0 +1,47 @@
+
+#div-input {
+    width: 800px;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#div-input * {
+    margin-left: 5px
+}
+
+#input-message {
+    width: 100%;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 1000px;
+    margin-bottom: 10px;
+    border: 1px solid #222222;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+#div-username {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#input-username {
+    width: 300px;
+}
+
+.send-area {
+    display: flex;
+}
+
+.send-area p {
+    border: 1px solid #222222;
+    border-radius: 30px;
+    padding: 2px;
+
+}

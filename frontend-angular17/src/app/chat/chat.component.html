@@ -1,0 +1,43 @@
+
+<div id="message-section">
+    <h2>Messages</h2>
+    
+    <div id="messages">
+    <p-scrollPanel id="scrollpanel-chat" [style]="{ height: '280px' }">
+        <p-dataView #dv [value]="receivedMessages">
+            <ng-template pTemplate="list" let-messages>
+                <div class="grid grid-nogutter">
+                    <div class="col-12" *ngFor="let msg of receivedMessages; let first = first" class="col-12">
+                        <span>{{ msg.username }} : {{ msg.message }}</span>
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataView>
+    </p-scrollPanel>
+    </div>
+</div>
+
+<div class="send-area">
+    <div id="div-input">
+        <input id="input-message" type="text" pInputText [(ngModel)]="message_text"/>
+        <p-button label="Send" class="primary" type="button" (click)="sendMessage()" />
+    </div>
+    <div id="connection-state">
+        <p>Status: {{ connection_state }}</p>
+    </div>
+</div>
+
+<div id="div-username">
+    <label for="username">Username</label>
+    <input 
+        pInputText 
+        id="input-username" 
+        aria-describedby="username-help"
+        value="Anonymous"
+        (input)="updateUsername(username.value)"
+        #username />
+    <small id="username-help">
+        Enter your username.
+    </small>
+</div>
+
